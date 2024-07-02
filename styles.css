@@ -1,0 +1,70 @@
+/* body全体のスタイル */
+body {
+    font-family: "M PLUS 1", sans-serif; /* フォント適用 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* viewportに対する高さ割合(vh)らしい 幅割合はvw */
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 6px; /* 丸み調整 */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+}
+
+select {
+    font-size: 16px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+/* ボタン(共通) */
+button {
+    font-size: 16px;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #40E0D0; /* ターコイズブルー */
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* ボタン非活性のときのスタイル */
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #008080; /* 濃いターコイズブルー */
+}
+
+/* キャンバス(画像描画領域) */
+.canvas-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+canvas {
+    border: 0px solid #ccc;
+}

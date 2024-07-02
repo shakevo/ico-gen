@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--適当にfaviconポコポコ作るやつ(575)-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ディスクリプション -->
+    <meta name="description" content="個人開発で適当にfavicon用意したい時に使うランダムico自動生成ツール。4×4マスのアイコンがワンクリック自動生成されます。icoとpngでの保存が出来るよ。"/>
+    <title>適当にfaviconポコポコ作るやつ - ICOファイルジェネレーター</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- コンテナ領域 -->
+    <div class="container">
+        <h1>適当にfaviconポコポコ作るやつ</h1>
+        <label for="size">大きさ</label>
+        <!-- ファイル作成サイズを選択するオプション。デフォは16*16 -->
+        <select id="size">
+            <option value="16">16x16</option>
+            <option value="32">32x32</option>
+            <option value="48">48x48</option>
+            <option value="64">64x64</option>
+            <option value="128">128x128</option>
+            <option value="256">256x256</option>
+        </select>
+        <button id="generate">プレビュー</button>
+        <!-- 画像描画領域 ココカラ -->
+        <div class="canvas-wrapper">
+            <canvas id="canvas"></canvas>
+        </div>
+        <!-- 画像描画領域 ココマデ -->
+        <button id="download-ico" disabled>ICO保存</button>
+        <button id="download-png" disabled>PNG保存</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
